@@ -143,3 +143,4 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+STATIC_DIRS = [BASE_DIR/'static']
