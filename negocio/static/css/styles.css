@@ -1,0 +1,234 @@
+/* =================================
+   TORTILLERÍA GABY
+   Hoja de estilos principal
+================================= */
+
+/* 1. Variables de colores */
+:root {
+    --color-primary: #E5A900;
+    --color-secondary: #8B4513;
+    --color-bg: #FFF8E7;
+    --color-text: #3E2B1C;
+    --color-white: #FFFFFF;
+    --color-success: #2E8B57;
+    --color-error: #D62828;
+    --color-warning: #F4A261;
+
+    --radius: 12px;
+    --space: 1rem;
+}
+
+/* 2. Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* 3. Encabezado */
+.site-header {
+    background-color: var(--color-primary);
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.site-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--color-white);
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 4. Navegación */
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px;
+}
+
+nav a:hover {
+    color: var(--color-secondary);
+}
+
+/* 5. Contenedor */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* 6. Títulos */
+h1, h2, h3 {
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+/* 7. Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.btn-primary:hover {
+    background-color: #C58F00;
+}
+
+.btn-danger {
+    background-color: var(--color-error);
+    color: white;
+}
+
+/* 8. Tarjetas de productos */
+.card {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--color-secondary);
+}
+
+.precio {
+    color: var(--color-success);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* 9. Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 14px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #FFF0C2;
+}
+
+/* 10. Formularios */
+form {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--color-primary);
+}
+
+/* 11. Mensajes */
+.success {
+    background-color: #D8F3DC;
+    color: #1B5E20;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.error {
+    background-color: #FFDADA;
+    color: var(--color-error);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* 12. Pie de página */
+.site-footer {
+    background-color: var(--color-secondary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* 13. Diseño adaptable a celulares */
+@media (max-width: 768px) {
+
+    .site-header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 8px 5px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}
